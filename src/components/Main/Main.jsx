@@ -53,17 +53,17 @@ const Main = () => {
 
                         </div>
                     </div>}
-
-                <div className="search-box">
-                    <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder="Enter a Prompt Here...." />
-                    <img src={assets.gallery_icon} alt="" />
-                    <img src={assets.mic_icon} alt="" />
-                    {input ? <img onClick={() => onSent()} src={assets.send_icon} alt="" /> : null}
+                <div className='main-bottom'>
+                    <div className="search-box">
+                        <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder="Enter a Prompt Here...." />
+                        <img src={assets.gallery_icon} alt="" />
+                        <img src={assets.mic_icon} alt="" />
+                        {input ? <img onClick={() => onSent()} src={assets.send_icon} alt="" /> : null}
+                    </div>
+                    <p className='bottom-info'>
+                        Gemini may display inaccurate info,including about people, so double-check its response. your privacy and Gemini Apps
+                    </p>
                 </div>
-                <p className='bottom-info'>
-                    Gemini may display inaccurate info,including about people, so double-check its response. your privacy and Gemini Apps
-                </p>
-
             </div>
         </div>
     )
